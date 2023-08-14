@@ -3,9 +3,9 @@
   become: true
   tasks:
 - name: install nginx
-      ansible.builtin.yum:
-        name: httpd
-        state: latest
+    ansible.builtin.yum:
+      name: httpd
+      state: latest
 
 - name: start nginx
   ansible.builtin.systemd:
@@ -18,4 +18,3 @@
   become: true
   roles:
     - sample
-
